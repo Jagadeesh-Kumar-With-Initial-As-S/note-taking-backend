@@ -8,6 +8,7 @@ const port = process.env.PORT;
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use("/user", userrouter);
 app.use("/note", noteRouter);
 app.get("/", (req, res) => {
   res.send({
@@ -24,5 +25,3 @@ app.listen(port, async () => {
   }
   console.log("The server is running on port number", port);
 });
-
-app.use("/user", userrouter);
