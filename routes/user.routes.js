@@ -1,7 +1,7 @@
 const userrouter = require("express").Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { UserModel } = require("../models/userModel");
+const { UserModel } = require("../models/UserModel");
 const client = require("../redis");
 client
   .connect()
